@@ -382,7 +382,7 @@ footer {
         height: 300px;
     }
     .chat-container {
-        width: 70%;
+        width: 600px;
     }
     .profile, .documents {
         display: none;
@@ -418,7 +418,7 @@ footer {
         width: 270px;
     }
     .chat-container {
-        width: 300px;
+        width: 400px;
         height: auto;
         justify-content: space-between;
 
