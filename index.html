@@ -7,9 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div class="menu-icon">☰</div>
+    <header class="top-bar">
+      <div class="menu-icon" onclick="toggleNav()">☰</div>
+      <div class="sidebar" id="sidebar">
+        <div>
+          <button class="close-btn" onclick="toggleNav()">✖</button>
+          <ul>
+            <li><a href="https://moumouh6.github.io/Users-Dashboard/" > Accueil</a></li>
+            <li><a href="https://moumouh6.github.io/Profile-page/" > Profile</a></li>
+            <li><a href="#" class="active"> Message</a></li>
+            <li><a  class="site-mzl"> Notification</a></li>
+            <li><a class="site-mzl">Aide</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          <a  class="site-mzl"> Paramètres</a>
+          <a href="https://moumouh6.github.io/Interface/" class="logout"> Se déconnecter</a>
+        </div>
+      </div>
     </header>
+       
 
 <section>
 
@@ -87,16 +105,7 @@
                 <span>Fettalnes@gmail.com</span>
             </div>
             
-            <div class="documents">
-                <div class="flaiche">
-                    <button class="button-flaiche" onclick="switchLeft()">&lt;</button>
-                    <button class="button-flaiche" onclick="switchRight()">&gt;</button>
-                </div>
-                <div class="pack">
-                    <img src="./pc.png" alt="pic">
-                    <p>Sécurité Réseau et Protection des Données</p>
-                </div>
-            </div>
+          
         </aside>
     </div>
 
@@ -223,5 +232,6 @@
         </div>
     </div>
 </section>
+<script src="index.js"></script>
 </body>
 </html>
