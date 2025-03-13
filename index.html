@@ -43,12 +43,16 @@
             <div class="container2">
                 <div class="header">
                     <h2>Recent Messages</h2>
-                    <span class="icon">▼</span>
                 </div>
-                
                 <div class="buttons">
-                    <button class="button-primary">Chat</button>
-                    <button class="button-secondary">Contact RH</button>
+                  <label>
+                    <input type="radio" name="type" value="RH">
+                    <span>RH</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="type" value="Chat" checked>
+                    <span>Chat</span>
+                  </label>
                 </div>
             </div>
                 <div class="messages">
@@ -73,43 +77,91 @@
         </div>
 
         <div class="chat-container">
-            <!-- Header -->
-            <div class="chat-header">
-                <div class="avatar"><img src="profil-pic.png" alt="profil-pic"></div>
-                <span class="username">Nesrine</span>
+          <!-- Header -->
+          <div class="chat-header">
+              <div class="avatar"><img src="profil-pic.png" alt="profil-pic"></div>
+              <span class="username">Nesrine</span>
+          </div>
+          
+          <!-- Chat Box -->
+          <div class="chat-box">
+              <div class="message received">
+                  <div class="message-content">
+                      <p>Bonjour madame !</p>
+                      <p>Madame, j’ai une question concernant la sécurité...</p>
+                  </div>
+              </div>
+              
+              <div class="message sent">
+                  <div class="message-content">
+                      <p>Bonsoir à vous !</p>
+                      <p>Bonne question ! Il est difficile de garantir une protection totale...</p>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Input Box -->
+          <div class="input-box">
+            <div class="messageBox">
+              <div class="fileUploadWrapper">
+                <label for="file">
+                  <svg viewBox="0 0 337 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle
+                      cx="168.5"
+                      cy="168.5"
+                      r="158.5"
+                      fill="none"
+                      stroke="#6c6c6c"
+                      stroke-width="20"
+                    ></circle>
+                    <path
+                      d="M167.759 79V259"
+                      stroke="#6c6c6c"
+                      stroke-width="25"
+                      stroke-linecap="round"
+                    ></path>
+                    <path
+                      d="M79 167.138H259"
+                      stroke="#6c6c6c"
+                      stroke-width="25"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                  <span class="tooltip">Add an image</span>
+                </label>
+                <input name="file" id="file" type="file" />
+              </div>
+              <input id="messageInput" type="text" placeholder="Message..." required="" />
+              <button id="sendButton">
+                <svg viewBox="0 0 664 663" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                    fill="none"
+                  ></path>
+                  <path
+                    d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                    stroke="#6c6c6c"
+                    stroke-width="33.67"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
             </div>
             
-            <!-- Chat Box -->
-            <div class="chat-box">
-                <div class="message received">
-                    <div class="avatar"><img src="profil-pic.png" alt="profil-pic"></div>
-                    <div class="message-content">
-                        <p>Bonjour madame !</p>
-                        <p>Madame, j’ai une question concernant la sécurité...</p>
-                    </div>
-                </div>
-                
-                <div class="message sent">
-                    <div class="message-content">
-                        <p>Bonsoir à vous !</p>
-                        <p>Bonne question ! Il est difficile de garantir une protection totale...</p>
-                    </div>
-                    <div class="avatar"><img src="profil-pic.png" alt="profil-pic"></div>
-                </div>
-            </div>
-            
-            <!-- Input Box -->
-            <div class="input-box">
-                <div class="avatar"><img src="profil-pic.png" alt="profil-pic"></div>
-                <input type="text" placeholder="Tapez un message">
-            </div>
+          </div>
         </div>
-
         <aside class="profile-sidebar">
-            <div class="profile">
-                <img src="profil-pic.png" alt="profile" class="profile-image">
-                <h2>Nesrine</h2>
-                <span>Fettalnes@gmail.com</span>
+            
+            <div class="card-client">
+              <div class="user-picture">
+                  <img src="profil-pic.png" alt="profile" class="profile-image">
+                  </img>
+              </div>
+              <p class="name-client"> Moumouh
+                  <span>IT departement</span>
+                  <span>Fettalnes@gmail.com</span>
+              </p>
             </div>
             
           
