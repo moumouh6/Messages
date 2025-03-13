@@ -16,8 +16,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-
+    padding: 15px;
+    
 }
 
 .top-bar h1{
@@ -32,38 +32,64 @@ body {
     box-shadow: none;
 }
 
-/* Barre latérale */
+
+/* 🌟 Sidebar Container */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 200px;
+    left: -250px; /* Sidebar is hidden by default */
+    width: 250px;
     height: 100%;
-    background: white;
-    color: black;
+    background: #ffffff;
+    color: #333;
     transition: left 0.3s ease-in-out;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ddd;
 }
 
+/* icons */
 
-/* Bouton de fermeture */
+/* Style for icons */
+.sidebar ul li a i,
+.sidebar-footer a i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change icon color on hover */
+.sidebar ul li a:hover i,
+.sidebar-footer a:hover i {
+    color: blue;
+}
+.sidebar-footer .logout:hover i{
+    color: red;
+}
+
+/* ✖ Close Button */
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 15px;
+    right: 20px;
     background: none;
     border: none;
-    color: black;
-    font-size: 20px;
+    color: #333;
+    font-size: 22px;
     cursor: pointer;
-    box-shadow: none;
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Liste des liens */
+.close-btn:hover {
+    transform: rotate(90deg);
+    color: red;
+}
+
+/* 📌 Sidebar Navigation Links */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -72,56 +98,77 @@ body {
 
 .sidebar ul li {
     padding: 15px;
-    transition: all ease-in-out 0.3s;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
-.sidebar a:hover {
-    transform: translateY(-3px);
+
+.sidebar ul li:hover {
+    background: #f0f0f0;
 }
 
-
-
+/* 🌟 Sidebar Links */
 .sidebar ul li a {
     display: flex;
     align-items: center;
-    color: black;
+    color: #333;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px;
-    font-weight: bold;
-    transition: all ease-in-out 0.3s;
-    cursor: pointer;
-    box-shadow: none;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
-/* Lien actif */
+.sidebar ul li a:hover {
+    background: rgba(0, 0, 255, 0.1);
+    color: blue;
+    transform: translateX(5px);
+}
+
+/* 🔵 Active Link */
 .sidebar ul li a.active {
     color: blue;
+    border-left: 4px solid blue;
+    background: rgba(0, 0, 255, 0.1);
 }
 
-/* Pied de la barre */
+/* ⚙ Sidebar Footer (Settings & Logout) */
 .sidebar-footer {
     padding: 15px;
     border-top: 1px solid #ddd;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-footer a {
     display: flex;
     align-items: center;
-    color: black;
+    color: #333;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px;
-    font-weight: bold;
-    box-shadow: none;
-}
-/* Bouton déconnexion */
-.sidebar-footer .logout {
-    color: red;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Affichage du menu */
+.sidebar-footer a:hover {
+    background: rgba(0, 0, 255, 0.1);
+    color: blue;
+    transform: translateX(5px);
+}
+
+/* 🔴 Logout Button */
+.sidebar-footer .logout {
+    color: red;
+    font-weight: bold;
+}
+
+.sidebar-footer .logout:hover {
+    background: rgba(255, 0, 0, 0.1);
+    color: darkred;
+}
+
+/* 📌 Sidebar Visibility */
 .sidebar.active {
     left: 0;
 }
@@ -350,13 +397,10 @@ body {
 
 
           /* Pied de page */
-
 /* Pied de page */
-/* Section contact */
-.contact {
 
+.contact {
     color: #ffffff;
-    padding: 2rem;
 }
 ul {
     list-style: none;
@@ -465,45 +509,36 @@ ul {
     flex: 1;
     min-width: 300px;
     margin: 1rem;
-    padding-right: 20%;
 }
 
-.gauche {
-    display: flex;
-    justify-content: space-evenly;
+.gauche  {
+  display: flex;
+  justify-content:start;
     align-items: center;
 }
 
-.place-g h1 {
-    font-size: 2rem;
+
+.gauche img, footer {
+    width: 200px;
+    height: 150px;
+
 }
 
-.place-g p {
-    font-size: 1rem;
-}
 
-.place-d p {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.down-logo {
-    width: 70px;
-    height: 70px;
-}
 
 .photo-reseau {
     width: 100%;
     max-width: 200px;
+ 
 }
 
 footer {
-    text-align: center;
+    text-align: start;
     font-size: 0.7rem;
     margin-top: 0.5rem;
+    width: auto;
+    height:auto ;
 }
-
-
 @media screen and (max-width: 1024px) {
     .container {
         flex-direction: row;
