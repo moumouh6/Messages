@@ -179,10 +179,10 @@ body {
                      /* left element of the body*/
 .container {
     display: flex;
-    height: 100vh; /* Full height */
+    height: auto; /* Full height */
     margin-left: 20px;
     margin-right: 20px;
-
+    margin-bottom: 30px;
 }
 .container1 {
     width: 400px;
@@ -492,16 +492,7 @@ label:last-child span {
 
                   /* Profile and Contact Info */
 
-.profile {
-    border-radius: 8px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    color: black;
-    display: grid;
-    place-items: center;    /* Centers the item both vertically and horizontally */
-    width: 200px;
-}
+
 .user-picture img{
     width: 100%;
 
@@ -539,10 +530,6 @@ label:last-child span {
   margin: auto;
 }
 
-.user-picture svg {
-  width: 2.5rem;
-  fill: currentColor;
-}
 
 .name-client {
   margin: 0;
@@ -712,41 +699,29 @@ footer {
     width: auto;
     height:auto ;
 }
+
 @media screen and (max-width: 1024px) {
     .container {
         flex-direction: row;
         height: auto;
-
     }
     .container1 {
-        width: 20%;
-        min-width: 100px;
+        width: 30%;
+        min-width: 150px;
         height: 250px;
     }
     .chat-container {
         width: 70%;
     }
-    .profile, .documents {
+    .card-client {
+
         display: none;
     }
-    .supp-msg{
-        display: none;
-    }
-    .button-primary{
-        font-size: 12px;
-        margin-right: 10px;
-    }
-    .button-secondary{
-        font-size: 12px;
-        margin-right: 20px;
-      
-    }
+   
     .buttons{
         display: flex;
         justify-content: center;
-        height: 40px;
         width: 100%;
-
     }
 }
 
@@ -757,54 +732,38 @@ footer {
         display: flex;
     }
     .container1 {
-        width: 270px;
+        width: 85%;
+        max-width: 250px;
+        height: 100px;
+        margin-bottom: 20px;
+
+    }
+    .container2{     
+        width: auto;
     }
     .chat-container {
-        width: 300px;
+        width: 90%;
+        max-width: 450px;
         height: auto;
         justify-content: space-between;
 
     }
-    .profile, .documents {
-        display: none;
-    }
+   
     .supconvo{
         display: none;
     }
     .buttons{
-        flex-direction: column;
-        align-items: start;
-        padding-left: 40px;
-        margin-top: 5px;
-        padding-right: 25px;
+        padding-bottom: 5px;  
+        }   
 
-        }    
-    .button-secondary{
-        margin-top: 20px;
-
-    }
-    .button-primary{
-        margin-top: 30px;
-    }
     .header{
         padding-bottom: 10px;
 
     }
-    .container1{
-        height: 100px;
 
-        margin-bottom: 20px;
-        flex-direction: column;
-
+    .card-client{
+        display: none;
     }
-    .container2{
-        flex-direction: row;
-        display: flex;padding: 10px;
-        padding-left:20px ;
-    }
-    
-    header{
-        padding-bottom:0px ;
-    }
+  
 
 }
