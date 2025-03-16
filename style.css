@@ -185,15 +185,14 @@ body {
     margin-bottom: 30px;
 }
 .container1 {
-    width: 400px;
-    height: 350px;
+    width: auto;
+    height: fit-content;
     background-color: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
 }
-
 
 .header {
     display: flex;
@@ -270,6 +269,15 @@ label:last-child span {
     margin-top: 10px;
 }
 
+.supp-msg{
+    display: none;
+}
+.message.supconvo{
+    align-items: center;
+}
+
+
+
 .avatar img{
     width: 40px;
     height: 40px;
@@ -329,6 +337,7 @@ label:last-child span {
     display: flex;
     flex-direction: column;
     height: 450px;
+    overflow-y: scroll;
 }
 
 .message {
@@ -337,12 +346,8 @@ label:last-child span {
     gap: 10px;
 }
 
-.received .message-content {
-    background: #f1f1f1;
-    padding-left: 10px;
-    padding-right: 5px;
-    border-radius: 10px;
-    max-width: 70%;
+.msg-chat{
+    margin: 5px 0;
 }
 
 .message p{
@@ -350,16 +355,34 @@ label:last-child span {
     
 }
 .sent {
+    display: flex;
     justify-content: flex-end;
-}
+    margin: 0;    margin-bottom: 5px;
 
+}
+.received{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;    margin-bottom: 5px;
+}
 .sent .message-content {
     background: #d1e7ff;
     padding-left: 10px;
+    border-radius: 10px;
+    margin: 0;
+}
+.received .message-content {
+    background: #f1f1f1;
+    padding-left: 10px;
     padding-right: 5px;
     border-radius: 10px;
+}
+
+.message-content{
+    word-wrap: break-word; /* Coupe les mots longs */
     max-width: 70%;
 }
+
 
 .message-title {
     font-weight: bold;
@@ -499,7 +522,7 @@ label:last-child span {
 }
 .card-client {
   background: rgb(230, 230, 230);
-  width: 13rem;
+  width: 10rem;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
@@ -677,14 +700,11 @@ ul {
     align-items: center;
 }
 
-
 .gauche img, footer {
     width: 200px;
     height: 150px;
 
 }
-
-
 
 .photo-reseau {
     width: 100%;
@@ -700,11 +720,13 @@ footer {
     height:auto ;
 }
 
+
+
+
 @media screen and (max-width: 1024px) {
     .container {
         flex-direction: row;
         height: auto;
-
     }
     .container1 {
         width: 30%;
@@ -715,7 +737,6 @@ footer {
         width: 70%;
     }
     .card-client {
-
         display: none;
     }
    
@@ -730,7 +751,6 @@ footer {
         display: flex;
         justify-content: center;
         width: 100%;
-
     }
 }
 
