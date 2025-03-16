@@ -46,7 +46,7 @@
                 </div>
                 <div class="buttons">
                   <label>
-                    <input type="radio" name="type" value="RH">
+                    <input type="radio" name="type" value="RH" >
                     <span>RH</span>
                   </label>
                   <label>
@@ -55,8 +55,8 @@
                   </label>
                 </div>
             </div>
-                <div class="messages">
-                    <div class="message supconvo">
+                <div class="messages chat" id="chat-message">
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
                         <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
                         <div class="message-content">
                             <strong>Nesrine Fettal</strong>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     
-                    <div class="message supconvo">
+                    <div class="message supconvo" data-name="Amari Layla" data-avatar="profil-pic.png">
                         <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
                         <div class="message-content">
                             <strong>Amari Layla</strong>
@@ -74,6 +74,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="messages" id="rh-messages" style="display: none;">
+                  <div class="message supconvo" data-name="RH Manager" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>RH Manager</strong>
+                          <span class="timestamp">9:15am</span>
+                          <p class="supp-msg">Nous avons mis à jour les politiques internes de l'entreprise.</p>
+                      </div>
+                  </div>
+                  
+                  <div class="message supconvo" data-name="Service RH" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Service RH</strong>
+                          <span class="timestamp">10:45am</span>
+                          <p class="supp-msg">N'oubliez pas de remplir votre formulaire de congé avant vendredi.</p>
+                      </div>
+                  </div>
+              </div>
         </div>
 
         <div class="chat-container">
