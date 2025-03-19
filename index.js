@@ -5,13 +5,6 @@ function toggleNav() {
         document.getElementById("sidebar").classList.toggle("active"); // Ajouter ou supprimer la classe active
     }
 
-document.querySelectorAll(".site-mzl").forEach(button => {
-    button.addEventListener("click", () => {
-        alert("cette page n'est pas accessible pour le moment!");
-    });})
-
-
-
 
  // Fonction pour gérer l'affichage des messages de chat et RH
 const typeButtons = document.querySelectorAll("input[name='type']");
@@ -102,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sendMessage(); // Appelle la fonction pour envoyer le message
     }
    });
+
 
 
 
