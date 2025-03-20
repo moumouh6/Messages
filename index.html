@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
@@ -41,13 +42,22 @@
     <div class="container">
         <div class="container1">
             <div class="container2">
-                <div class="header">
-                    <h2>Recent Messages</h2>
+                <div class="header" id="masquer">
+                    <h2 id="hide-msg">Recent Messages</h2>
+                    <span class="material-symbols-outlined" id="searchIcon" >
+                      search
+                    </span>
+                    <input type="text" id="searchInput" placeholder="Rechercher un message..." class="search-box" style="display: none;">
                 </div>
+
                 <div class="buttons">
                   <label>
                     <input type="radio" name="type" value="RH" >
                     <span>RH</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="type" value="Prof" >
+                    <span>Prof</span>
                   </label>
                   <label>
                     <input type="radio" name="type" value="Chat" checked>
@@ -63,6 +73,73 @@
                             <span class="timestamp">4:27pm</span>
                             <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
                         </div>
+                    </div>
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
+                    </div>
+
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
+                    </div>
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
+                    </div>
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
+                    </div>
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
+                    </div>
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
+                    </div>
+
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
+                    </div>
+                  
+                    <div class="message supconvo" data-name="Nesrine Fettal" data-avatar="profil-pic.png">
+                      <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                      <div class="message-content">
+                          <strong>Nesrine Fettal</strong>
+                          <span class="timestamp">4:27pm</span>
+                          <p class="supp-msg">Bonne question ! Il est difficile de garantir une protection totale …</p>
+                      </div>
                     </div>
                     
                     <div class="message supconvo" data-name="Amari Layla" data-avatar="profil-pic.png">
@@ -93,11 +170,33 @@
                       </div>
                   </div>
               </div>
+              <div class="messages" id="prof-messages" style="display: none;">
+                <div class="message supconvo" data-name="Mr Bazouzi" data-avatar="profil-pic.png">
+                    <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                    <div class="message-content">
+                        <strong>Mr Bazouzi</strong>
+                        <span class="timestamp">10:15am</span>
+                        <p class="supp-msg">Nous avons mis à jour les politiques internes de l'entreprise.</p>
+                    </div>
+                </div>
+                
+                <div class="message supconvo" data-name="Mr Saleh" data-avatar="profil-pic.png">
+                    <span class="avatar"><img src="profil-pic.png" alt="profil-pic"></span>
+                    <div class="message-content">
+                        <strong>Mr Saleh</strong>
+                        <span class="timestamp">10:45am</span>
+                        <p class="supp-msg">N'oubliez pas de remplir votre formulaire de congé avant vendredi.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="chat-container">
           <!-- Header -->
           <div class="chat-header">
+              <span class="material-symbols-outlined arrow" onclick="goback()">
+              arrow_back
+              </span>
               <div class="avatar"><img src="profil-pic.png" alt="profil-pic"></div>
               <span class="username">Nesrine</span>
           </div>
@@ -170,8 +269,22 @@
             
           </div>
         </div>
-
+        <aside class="profile-sidebar">
+ 
+          <div class="card-client">
+            <div class="user-picture">
+                <img src="profil-pic.png" alt="profile" class="profile-image">
+                </img>
+            </div>
+            <p class="name-client"> Moumouh
+                <span>IT departement</span>
+                <span>Fettalnes@gmail.com</span>
+            </p>
+          </div>
+    
+      </aside>
     </div>
+
 
     </section>
 

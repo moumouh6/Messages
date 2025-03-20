@@ -85,7 +85,6 @@ body {
 }
 
 .close-btn:hover {
-
     color: red;
 }
 
@@ -193,6 +192,18 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
 }
+.search-box {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-box:focus{
+    box-shadow: none;
+
+}
+
 
 .header {
     display: flex;
@@ -206,6 +217,7 @@ body {
     font-size: 20px;
 }
 
+
 :focus {
   outline: 0;
   border-color: #6759CD;
@@ -214,7 +226,6 @@ body {
 
 .buttons  {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -269,14 +280,21 @@ label:last-child span {
     margin-top: 10px;
 }
 
-.supp-msg{
-    display: none;
-}
 .message.supconvo{
     align-items: center;
 }
 
+.message.supconvo:hover{
+    transform: scale(1.05); /* Effet de zoom */
+    transition: 0.3s ease-in-out; /* Animation fluide */
+    font-weight: bolder;
+    background-color: lightgray;
+    padding: 5px;
+}
 
+.supp-msg{
+    display: none;
+}
 
 .avatar img{
     width: 40px;
@@ -381,6 +399,10 @@ label:last-child span {
 .message-content{
     word-wrap: break-word; /* Coupe les mots longs */
     max-width: 70%;
+}
+
+.chat-image{
+    width: 30%;
 }
 
 
@@ -514,6 +536,25 @@ label:last-child span {
   stroke: white;
 }
 
+.chat-image {
+    max-width: 200px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.chat-file {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.chat-file:hover {
+    text-decoration: underline;
+}
+
 
 
 /* Recent Messages */
@@ -524,6 +565,62 @@ label:last-child span {
     margin-bottom: 20px;
 }
 
+                  /* Profile and Contact Info */
+ 
+ 
+ .user-picture img{
+     width: 100%;
+ 
+}
+ .card-client {
+   background: rgb(230, 230, 230);
+   width: 10rem;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border: 4px solid #fff;
+   box-shadow: 0 6px 10px #212121;
+   border-radius: 10px;
+   text-align: center;
+   color: black;
+   font-family: "Poppins", sans-serif;
+   transition: all 0.3s ease;
+}
+ 
+ .card-client:hover {
+   transform: translateY(-10px);
+}
+ 
+ .user-picture {
+   overflow: hidden;
+   object-fit: cover;
+   width: 5rem;
+   height: 5rem;
+   border: 4px solid #fff;
+   border-radius: 999px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+}
+ 
+ 
+ .name-client {
+   margin: 0;
+   margin-top: 20px;
+   font-weight: 600;
+   font-size: 18px;
+}
+ 
+ .name-client span {
+   display: block;
+   font-weight: 200;
+   font-size: 16px;
+   margin-top: 5px;
+}
+ 
+ 
 
           /* Pied de page */
 /* Pied de page */
@@ -677,7 +774,7 @@ footer {
     .container1 {
         width: 30%;
         min-width: 150px;
-        height: 250px;
+
     }
     .chat-container {
         width: 70%;
@@ -707,11 +804,11 @@ footer {
         display: flex;
     }
     .container1 {
-        width: 85%;
-        max-width: 250px;
-        height: 100px;
-        margin-bottom: 20px;
-
+        width: 100%;
+        max-width: 300px;
+        overflow-y: auto;
+        max-height: 400px;
+        display: block;
     }
     .container2{     
         width: auto;
@@ -721,23 +818,49 @@ footer {
         max-width: 450px;
         height: auto;
         justify-content: space-between;
-
-    }
-   
-    .supconvo{
         display: none;
     }
+   /* Personnaliser la barre de défilement */
+    .container1::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .container1::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+
+    .container1::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .chat-container.active {
+        display: block; /* Afficher quand un message est sélectionné */
+    }
+
+    .container1.hidden {
+        display: none; /* Masquer quand la discussion est affichée */
+    }
+    
     .buttons{
         padding-bottom: 5px;  
-        }   
+    }   
 
     .header{
         padding-bottom: 10px;
 
     }
-
+    .arrow{
+        width: 25%;
+    }
     .card-client{
         display: none;
+    }
+    .avatar img{
+        margin-right: 0;
+    }
+    .chat-header{
+        justify-content:start;
     }
   
 
