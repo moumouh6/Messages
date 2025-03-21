@@ -16,6 +16,7 @@ body {
     justify-content: start;
     align-items: center;
     padding: 15px;
+    padding-top: 0;
 }
 
 .top-bar h1{
@@ -183,15 +184,35 @@ body {
     margin-right: 20px;
     margin-bottom: 30px;
 }
+
 .container1 {
     width: auto;
     height: fit-content;
     background-color: white;
     border-radius: 8px;
     padding: 20px;
+    padding-top: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
+    max-height: 575px;
+    overflow-y: auto;
 }
+
+/* Personnaliser la barre de défilement */
+.container1::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 2px;
+}
+
+.container1::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+    
+}
+
+.container1::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .search-box {
     width: 100%;
     padding: 8px;
@@ -199,11 +220,11 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .search-box:focus{
     box-shadow: none;
 
 }
-
 
 .header {
     display: flex;
@@ -212,11 +233,9 @@ body {
     color: black;
 }
 
-
 .header h2 {
     font-size: 20px;
 }
-
 
 :focus {
   outline: 0;
@@ -245,10 +264,12 @@ body {
   z-index: 1;
   color: #6759CD;
 }
+
 label{
     width: 80px;
     height: 40px;
 }
+
 label span {
   display: block;
   cursor: pointer;
@@ -270,7 +291,6 @@ label:first-child span {
 label:last-child span {
   border-radius: 0 .375em .375em 0;
 }
-
 
 .message {
     display: flex;
@@ -806,7 +826,7 @@ footer {
     .container1 {
         width: 100%;
         max-width: 300px;
-        overflow-y: auto;
+  
         max-height: 400px;
         display: block;
     }
@@ -819,19 +839,6 @@ footer {
         height: auto;
         justify-content: space-between;
         display: none;
-    }
-   /* Personnaliser la barre de défilement */
-    .container1::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .container1::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-    }
-
-    .container1::-webkit-scrollbar-thumb:hover {
-        background: #555;
     }
 
     .chat-container.active {
